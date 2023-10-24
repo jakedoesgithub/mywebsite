@@ -5,44 +5,49 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html lang="en">
-	<head>
-		<title>Jake Ardoin Homepage</title>
-		<link rel="shortcut icon" type="image/x-icon" href="images/JA_logo_favicon.ico"/>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+{% load static %}
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/my_photo.jpg" alt="" /></a>
-					<h1><strong>I'm Jake Ardoin</strong>, an independent software developer, avid 3D-printing enthusiast, and pretty decent cook.</h1>
-				</div>
+<head>
+	<title>Jake Ardoin Homepage</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/JA_logo_favicon.ico" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{% static 'home/css/main.css'%}" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="#" class="image avatar"><img src="{% static 'home/images/my_photo.jpg %}" alt="" /></a>
+			<h1><strong>I'm Jake Ardoin</strong>, an independent software developer, avid 3D-printing enthusiast, and
+				pretty decent cook.</h1>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- SECTION One -->
+		<section id="one">
+			<header class="major">
+				<h2>I'm in the middle of re-working this site.<br />
+					Sorry if it's a little rough around the edges.</h2>
 			</header>
+			<p>Click the github or LinkedIn icon in the bottom left to be taken to my profiles.<br /><br />
 
-		<!-- Main -->
-			<div id="main">
-
-				<!-- SECTION One -->
-					<section id="one">
-						<header class="major">
-							<h2>I'm in the middle of re-working this site.<br />
-								Sorry if it's a little rough around the edges.</h2>
-						</header>
-						<p>Click the github or LinkedIn icon in the bottom right to be taken to my profiles.<br/><br/>
-
-							Currently I'm working on converting my grandfather's cajun cookbook into a digital form.<br/>
-							When it's done it'll be available at <a href="https://cajuncookbook.jakeardoin.com">https://cajuncookbook.jakeardoin.com</a>.
-						</p>
-						<!-- <ul class="actions">
+				Currently I'm working on converting my grandfather's cajun cookbook into a digital form.<br />
+				When it's done it'll be available at <a
+					href="https://cajuncookbook.jakeardoin.com">https://cajuncookbook.jakeardoin.com</a>.
+			</p>
+			<!-- <ul class="actions">
 							<li><a href="#" class="button">Learn More</a></li>
 						</ul> -->
-					</section>
+		</section>
 
-				<!-- SECTION Two -->
-					<!-- <section id="two">
+		<!-- SECTION Two -->
+		<!-- <section id="two">
 						<h2>Recent Work</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
@@ -80,11 +85,11 @@
 							<li><a href="#" class="button">Full Portfolio</a></li>
 						</ul>
 					</section> -->
-				<!-- end SECTION 2 -->
+		<!-- end SECTION 2 -->
 
-					<!-- SECTION Three -->
+		<!-- SECTION Three -->
 
-					<!-- <section id="three">
+		<!-- <section id="three">
 						<h2>Get In Touch</h2>
 						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
 						<div class="row">
@@ -121,8 +126,8 @@
 						</div>
 					</section> -->
 
-				<!-- SECTION Four -->
-				<!--
+		<!-- SECTION Four -->
+		<!--
 					<section id="four">
 						<h2>Elements</h2>
 
@@ -439,30 +444,34 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					</section>
 				-->
 
-			</div>
+	</div>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://www.github.com/jakedoesgithub" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://www.linkedin.com/in/jake-ardoin-csc" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
-						<!-- <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li> -->
-						</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				<li><a href="https://www.github.com/jakedoesgithub" class="icon brands fa-github"><span
+							class="label">Github</span></a></li>
+				<li><a href="https://www.linkedin.com/in/jake-ardoin-csc" class="icon brands fa-linkedin"><span
+							class="label">LinkedIn</span></a></li>
+				<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+				<!-- <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li> -->
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Untitled</li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<!-- Scripts -->
+	<script src="{% static 'home/js/jquery.min.js' %}"></script>
+	<script src="{% static 'home/js/jquery.poptrox.min.js' %}"></script>
+	<script src="{% static 'home/js/browser.min.js' %}"></script>
+	<script src="{% static 'home/js/breakpoints.min.js' %}"></script>
+	<script src="{% static 'home/js/util.js' %}"></script>
+	<script src="{% static 'home/js/main.js' %}"></script>
 
-	</body>
+</body>
+
 </html>
