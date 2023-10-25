@@ -12,7 +12,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/JA_logo_favicon.ico' %}" />
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="{% static 'home/css/main.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/main.css' %}" />
 </head>
 
 <body class="is-preload">
@@ -36,6 +36,8 @@
 					Sorry if it's a little rough around the edges.</h2>
 			</header>
 			<p>Click the Github or LinkedIn icon in the bottom left to be taken to my profiles.
+				<br />
+				Also, click the cookbook below
 			</p>
 			<!-- <ul class="actions">
 							<li><a href="#" class="button">Learn More</a></li>
@@ -47,11 +49,12 @@
 			<h2>Recent Work</h2>
 			<div class="row">
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+					<a href="{%url 'cookbook:home'}">
+						<img src="{% static 'home/images/cookbook_cover.png' %}" class="image fit thumb" alt="" /></a>
 					<h3>Magna sed consequat tempus</h3>
 					<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 				</article>
-				<article class="col-6 col-12-xsmall work-item">
+				<article class=" col-6 col-12-xsmall work-item">
 					<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
 					<h3>Ultricies lacinia interdum</h3>
 					<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
@@ -77,11 +80,11 @@
 					<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 				</article>
 			</div>
-			<ul class="actions">
+			<!-- <ul class="actions">
 				<li><a href="#" class="button">Full Portfolio</a></li>
-			</ul>
-		</section> -->
-		<!-- end SECTION 2
+			</ul> -->
+		</section>
+		<!-- end SECTION 2 -->
 
 		<!-- SECTION Three -->
 

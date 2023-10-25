@@ -12,6 +12,7 @@ psycopg = {extras = ["binary"], version = "*"}
 dj-database-url = "*"
 django-debug-toolbar = "*"
 uvicorn = "*"
+uuid6 = "*"
 
 [dev-packages]
 

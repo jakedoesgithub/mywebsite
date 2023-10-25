@@ -23,4 +23,5 @@ urlpatterns = [
     path("", RedirectView.as_view(url="home/"), name="home"),
     path("admin/", admin.site.urls),
     path("home/", include("home.urls")),
-]
+    path("cookbook/", include("cookbook.urls")),
+
