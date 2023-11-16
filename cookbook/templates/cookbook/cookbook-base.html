@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {<title>
+        {% block title %}
+        {% endblock title %}
+    </title>}
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="{% url 'cookbook:home' %}">Home</a>
+                    <a class="nav-link" href="{% url 'cookbook:recipe-list' %}">Recipes</a>
+                    <a class="nav-link" href="{% url 'cookbook:author-list' %}">Authors</a>
+                    <a class="nav-link" href="{% url 'cookbook:about-cookbook' %}">About Cookbook</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% block body %}
+    {% endblock body %}
+</body>
+</html>

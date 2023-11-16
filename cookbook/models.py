@@ -66,8 +66,8 @@ class Recipe(models.Model):
     )
 
     class Meta:
-        verbose_name = _("recipe")
-        verbose_name_plural = _("recipes")
+        verbose_name = "recipe"
+        verbose_name_plural = "recipes"
 
     def __str__(self):
         """Unicode representation of Recipe."""
