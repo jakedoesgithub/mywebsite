@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.encoding import iri_to_uri
 from django.utils.text import slugify
 from django.urls import reverse
+from django_extensions.db.fields import AutoSlugField
 from uuid6 import uuid7
 
 
@@ -22,10 +23,7 @@ class Author(models.Model):
     misc_info = models.TextField(
         max_length=500, help_text="Miscellaneous information about the author"
     )
-    slug = models.SlugField(
-        editable=False,
-        default=slugify(f"{first_name} {last_name}"),
-    )
+    slug = AutoSlugField(populate_from=["first_name", "last_name"], editable=False)
 
     class Meta:
         """Meta definition for Author."""
@@ -39,7 +37,7 @@ class Author(models.Model):
 
     def get_absolute_url(self):
         """Returns the url to access a particular Author instance."""
-        return reverse("author-detail", kwargs={"slug": self.slug})
+        return reverse("cookbook:author-detail", kwargs={"slug": self.slug})
 
 
 class Recipe(models.Model):
@@ -53,26 +51,31 @@ class Recipe(models.Model):
         on_delete=models.CASCADE,
         help_text="Author of the recipe",
     )
-    name = models.CharField(
+    title = models.CharField(
         max_length=70, help_text="Recipe name", blank=False, unique=True
+    )
+    category = models.CharField(
+        max_length=50, help_text="Recipe category", default="Uncategorized"
+    )
+    ingredients = models.TextField(
+        max_length=2000, help_text="Ingredients required for the recipe"
+    )
+    instructions = models.TextField(
+        max_length=2000, help_text="Cooking instructions for the recipe"
     )
     misc_info = models.TextField(
         max_length=500, help_text="Miscellaneous information about the recipe"
     )
-    slug = models.SlugField(
-        editable=False,
-        default=slugify(name),
-        max_length=80,
-    )
+    slug = AutoSlugField(populate_from=["title"], editable=False, unique=True)
 
     class Meta:
-        verbose_name = "recipe"
-        verbose_name_plural = "recipes"
+        verbose_name = "Recipe"
+        verbose_name_plural = "Recipes"
 
     def __str__(self):
         """Unicode representation of Recipe."""
-        return f"{self.name}"
+        return f"{self.title} by {self.author}"
 
     def get_absolute_url(self):
         """Returns the url to access a particular Recipe instance."""
-        return reverse("recipe-detail", kwargs={"slug": self.slug})
+        return reverse("cookbook:recipe-detail", kwargs={"slug": self.slug})

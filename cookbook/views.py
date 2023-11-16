@@ -25,6 +25,7 @@ class AuthorDetailView(DetailView):
 class RecipeDetailView(DetailView):
     model = Recipe
     template_name = "cookbook/recipe-detail.html"
+    context_object_name = "recipe"
 
 
 class AuthorListView(ListView):
