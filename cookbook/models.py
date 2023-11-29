@@ -23,7 +23,9 @@ class Author(models.Model):
     misc_info = models.TextField(
         max_length=500, help_text="Miscellaneous information about the author"
     )
-    slug = AutoSlugField(populate_from=["first_name", "last_name"], editable=False)
+    slug = AutoSlugField(
+        populate_from=["first_name", "last_name"], editable=False, unique=True
+    )
 
     class Meta:
         """Meta definition for Author."""
@@ -62,6 +64,9 @@ class Recipe(models.Model):
     )
     instructions = models.TextField(
         max_length=2000, help_text="Cooking instructions for the recipe"
+    )
+    serving_size = models.CharField(
+        max_length=100, default="None listed", help_text="Serving size for the recipe"
     )
     misc_info = models.TextField(
         max_length=500, help_text="Miscellaneous information about the recipe"
