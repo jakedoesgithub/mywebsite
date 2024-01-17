@@ -10,7 +10,7 @@
         <title>Jake Ardoin Homepage</title>
         <link rel="shortcut icon"
               type="image/x-icon"
-              href="{% static 'images/JA_logo_favicon.ico' %}" />
+              href="{% static 'home/images/JA_logo_favicon.ico' %}" />
         <meta charset="utf-8" />
         <meta name="viewport"
               content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -23,7 +23,8 @@
         <header id="header">
             <div class="inner">
                 <a href="#" class="image avatar">
-                    <img src="{% static 'home/images/my_photo.jpg' %}" alt="" />
+                    <img src="{% static 'home/images/my_photo.jpg' %}"
+                         alt="Photo of Jake Ardoin" />
                 </a>
                 <h1>
                     <strong>I'm Jake Ardoin</strong>, an independent software developer, avid 3D-printing enthusiast, and
@@ -45,24 +46,19 @@
                 <p>
                     Click the Github or LinkedIn icon in the bottom left to be taken to my profiles.
                     <br />
-                    Also, click the cookbook below
                 </p>
-                <!-- <ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-</ul> -->
             </section>
             <!-- SECTION Two -->
             <section id="two">
-                <!-- <h2>Recent Work</h2> -->
                 <div class="row">
                     <article class="col-6 col-12-xsmall work-item">
-                        <a href="{% url 'cookbook:home' %}">
+                        <a href="{% url 'cookbook:recipe-list' %}">
                             <img src="{% static 'home/images/red_cajun_cookbook.png' %}"
                                  class="image fit thumb"
                                  alt="" />
                         </a>
-                        <h3>Magna sed consequat tempus</h3>
-                        <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                        <h3>Grandma's Mama's Recipes</h3>
+                        <p>Recipes from my grandfather's cookbook.</p>
                     </article>
                     <article class=" col-6 col-12-xsmall work-item">
                         <a href="images/fulls/02.jpg" class="image fit thumb">
@@ -108,10 +104,10 @@
 										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
 										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
 										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-                        									</div>
-            								</form>
-            								<ul class="actions">
-            									<li><input type="submit" value="Send Message" /></li>
+                                                                                                                        									</div>
+                                                            								</form>
+                                                            								<ul class="actions">
+                                                            									<li><input type="submit" value="Send Message" /></li>
 								</ul>
 							</div>
 							<div class="col-4 col-12-small">

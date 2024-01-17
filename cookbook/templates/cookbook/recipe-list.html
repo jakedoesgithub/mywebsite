@@ -1,13 +1,12 @@
 {% extends 'cookbook/cookbook-base.html' %}
 {% load static %}
-{% load recipe_methods %}
 {% block title %}
     Recipe List
 {% endblock title %}
 {% block body %}
     <div class="container">
         <div class="my-4 col">
-            <h1 class="text-center">List of Recipes</h1>
+            <h1 class="text-center">Recipe List</h1>
         </div>
         {% get_recipe_categories as categories %}
         {% for recipe_category in categories %}

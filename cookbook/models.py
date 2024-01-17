@@ -41,6 +41,10 @@ class Author(models.Model):
         """Returns the url to access a particular Author instance."""
         return reverse("cookbook:author-detail", kwargs={"slug": self.slug})
 
+    def get_authors_list_alphabetical(self):
+        """Returns a list of all authors in alphabetical order."""
+        return Author.objects.order_by("last_name", "first_name")
+
 
 class Recipe(models.Model):
     """Model definition for Recipe."""

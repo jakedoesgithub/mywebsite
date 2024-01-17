@@ -8,10 +8,6 @@ from .models import Author, Recipe
 # Create your views here.
 
 
-class CookbookHomeView(TemplateView):
-    template_name = "cookbook/cookbook-home.html"
-
-
 class AboutCookbookView(TemplateView):
     template_name = "cookbook/about-cookbook.html"
 
