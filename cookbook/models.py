@@ -84,3 +84,15 @@ class Recipe(models.Model):
     def get_absolute_url(self):
         """Returns the url to access a particular Recipe instance."""
         return reverse("cookbook:recipe-detail", kwargs={"slug": self.slug})
+
+    def ingredients_as_list(self):
+        tmp = self.ingredients.split("\n")
+        if tmp[-1] == "":
+            tmp.pop()
+        return tmp
+
+    def instructions_as_list(self):
+        tmp = self.instructions.split("\n")
+        if tmp[-1] == "":
+            tmp.pop()
+        return tmp

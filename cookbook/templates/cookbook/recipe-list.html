@@ -1,15 +1,30 @@
 {% extends 'cookbook/cookbook-base.html' %}
 {% load static %}
+{% load recipe_methods %}
 {% block title %}
     Recipe List
 {% endblock title %}
 {% block body %}
-    <h1>Recipes List</h1>
-    <ul>
-        {% for recipe in recipes %}
-            <li>
-                <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }} by {{ recipe.author }}</a>
-            </li>
+    <div class="container">
+        <div class="my-4 col">
+            <h1 class="text-center">List of Recipes</h1>
+        </div>
+        {% get_recipe_categories as categories %}
+        {% for recipe_category in categories %}
+            <div class="row justify-content-md-center">
+                <div class="my-2 p-2 col-lg-6 border border-danger border-3 rounded">
+                    <h2>{{ recipe_category }}</h2>
+                    <ul>
+                        {% for recipe in recipes %}
+                            {% if recipe.category == recipe_category %}
+                                <li class="m-1">
+                                    <a href="{{ recipe.get_absolute_url }}">{{ recipe.title }} by {{ recipe.author }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
 {% endblock body %}
