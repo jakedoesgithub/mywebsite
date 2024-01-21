@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.encoding import iri_to_uri
 from django.utils.text import slugify
 from django.urls import reverse
+
 from django_extensions.db.fields import AutoSlugField
 from uuid6 import uuid7
 
@@ -90,12 +91,22 @@ class Recipe(models.Model):
         return reverse("cookbook:recipe-detail", kwargs={"slug": self.slug})
 
     def ingredients_as_list(self):
+        """Returns a list of ingredients for the recipe.
+
+        :return: a list of ingredients for the recipe.
+        :rtype: list[str]
+        """
         tmp = self.ingredients.split("\n")
         if tmp[-1] == "":
             tmp.pop()
         return tmp
 
     def instructions_as_list(self):
+        """Returns a list of cooking instructions for the recipe.
+
+        :return: a list of cooking instructions for the recipe.
+        :rtype: list[str]
+        """
         tmp = self.instructions.split("\n")
         if tmp[-1] == "":
             tmp.pop()
