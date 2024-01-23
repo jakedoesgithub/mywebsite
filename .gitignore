@@ -63,3 +63,12 @@ node_modules/
 
 # dotenv environment variables file
 .env
+prod.env
+dev.env
+
+
+#production files
+docker-compose-prod.yml
+
+#.vscode
+.vscode/
