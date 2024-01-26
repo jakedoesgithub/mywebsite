@@ -24,4 +24,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("home/", include("home.urls")),
     path("cookbook/", include("cookbook.urls")),
+    path("blog/", include("blog.urls")),
 ]

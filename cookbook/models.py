@@ -8,7 +8,19 @@ from uuid6 import uuid7
 
 
 class Author(models.Model):
-    """Model definition for a recipe Author."""
+    """
+    _summary_
+
+    Parameters
+    ----------
+    models : _type_
+        _description_
+
+    Returns
+    -------
+    _type_
+        _description_
+    """
 
     author_id = models.UUIDField(
         primary_key=True, default=uuid7, editable=False, unique=True
@@ -41,10 +53,6 @@ class Author(models.Model):
     def get_absolute_url(self):
         """Returns the url to access a particular Author instance."""
         return reverse("cookbook:author-detail", kwargs={"slug": self.slug})
-
-    def get_authors_list_alphabetical(self):
-        """Returns a list of all authors in alphabetical order."""
-        return Author.objects.order_by("last_name", "first_name")
 
 
 class Recipe(models.Model):
