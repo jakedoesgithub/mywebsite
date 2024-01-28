@@ -49,7 +49,7 @@
                 </p>
             </section>
             <section id="two">
-                <div class="row">
+                <div class="row justify-content-md-center">
                     <article class="col-6 col-12-xsmall work-item">
                         <a href="{% url 'cookbook:recipe-list' %}">
                             <img src="{% static 'home/images/red_cajun_cookbook.png' %}"
@@ -59,14 +59,17 @@
                         <h3>Grandma's Mama's Recipes</h3>
                         <p>Recipes from my grandfather's cookbook.</p>
                     </article>
-                    <article class=" col-6 col-12-xsmall work-item">
-                        <a href="images/fulls/02.jpg" class="image fit thumb">
-                            <img src="images/thumbs/02.jpg" alt="" />
+                    <article class="col-6 col-12-xsmall work-item">
+                        <a href="{% url 'cookbook:recipe-list' %}">
+                            <img src="{% static 'home/images/jakes_blog_image.png' %}"
+                                 class="image fit thumb"
+                                 alt="" />
                         </a>
-                        <h3>Ultricies lacinia interdum</h3>
-                        <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                        <h3>Grandma's Mama's Recipes</h3>
+                        <p>Recipes from my grandfather's cookbook.</p>
                     </article>
-				</div>
+
+                </div>
                 <!-- <article class="col-6 col-12-xsmall work-item">
 					<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
 					<h3>Tortor metus commodo</h3>
@@ -91,8 +94,8 @@
 				<li><a href="#" class="button">Full Portfolio</a></li>
 				</ul> -->
             </section>
-			<!-- !SECTION Body: Intro and Linked Items-->
-			<!-- SECTION three-->
+            <!-- !SECTION Body: Intro and Linked Items-->
+            <!-- SECTION three-->
             <!-- <section id="three">
 						<h2>Get In Touch</h2>
 						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
@@ -103,10 +106,10 @@
 										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
 										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
 										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-                                                                                                                        									</div>
-                                                            								</form>
-                                                            								<ul class="actions">
-                                                            									<li><input type="submit" value="Send Message" /></li>
+                                                                                                                                                        									</div>
+                                                                            								</form>
+                                                                            								<ul class="actions">
+                                                                            									<li><input type="submit" value="Send Message" /></li>
 								</ul>
 							</div>
 							<div class="col-4 col-12-small">
@@ -129,9 +132,9 @@
 							</div>
 						</div>
 				 </section> -->
-				 <!-- !SECTION three-->
-				 <!-- SECTION Four -->
-				 <!--
+<!-- !SECTION three-->
+<!-- SECTION Four -->
+<!--
 					<section id="four">
 						<h2>Elements</h2>
 
@@ -446,8 +449,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						</section>
 						
 					</section>-->
-					<!-- !SECTION Four -->
-				</div>
+<!-- !SECTION Four -->
+
+</div>
 <!-- SECTION footer-->
 <!-- Footer -->
 <footer id="footer">
