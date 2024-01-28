@@ -2,7 +2,7 @@ from django.db import models
 from django.urls import reverse
 from django.utils.encoding import iri_to_uri
 from django.utils.text import slugify
-
+from django.contrib.postgres.fields import ArrayField
 from django_extensions.db.fields import AutoSlugField
 from uuid6 import uuid7
 
@@ -37,10 +37,13 @@ class Post(models.Model):
     )
     title = models.CharField(max_length=255, help_text="Blog post title")
     date_posted = models.DateTimeField(auto_now_add=True)
-    tags = models.ManyToManyField(Tag, help_text="Tags for the blog post")
+    tags = models.ManyToManyField(
+        Tag, related_name="posts", help_text="Tags for the blog post"
+    )
     body = models.TextField(help_text="Post body")
-    snippet = models.TextField(help_text="Post snippet", default=body.split("\n\n")[0])
-
+    snippet = models.TextField(
+        help_text="Post snippet", default="No snippet for this post"
+    )
     slug = AutoSlugField(populate_from=["title"], editable=False, unique=True)
 
     class Meta:

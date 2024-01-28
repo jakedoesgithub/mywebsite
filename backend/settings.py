@@ -34,7 +34,7 @@ DEBUG = env("DJANGO_DEBUG", default=False)
 ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS", default="*").split(",")
 
 
-# Application definition
+# ANCHOR Apps
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -78,25 +78,18 @@ TEMPLATES = [
 WSGI_APPLICATION = "backend.wsgi.application"
 
 
-# Database
+# ANCHOR Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
     "default": dj_database_url.config(
-        default="postgres://postgres:@localhost:5432/backend",
+        default=f"postgres://postgres:@{env('DB_SOURCE', default='localhost')}:5432/backend",
         conn_max_age=env.int("POSTGRES_CONN_MAX_AGE", 600),
     )
 }
-# change to this when you are running it from a server
-# DATABASES = {
-#     "default": dj_database_url.config(
-#         default="postgres://postgres:@localhost:5432/backend",
-#         conn_max_age=env.int("POSTGRES_CONN_MAX_AGE", 600),
-#     )
-# }
 
 
-# Password validation
+# ANCHOR Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -115,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
+# ANCHOR Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 APPEND_SLASH = False
 LANGUAGE_CODE = "en-us"
@@ -124,18 +117,18 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
+# ANCHOR Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
 
 
-# Default primary key field type
+# ANCHOR Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# dev settings
+# ANCHOR DEV settings
 DEBUG_TOOLBAR_PANELS = []
 
 if env.str("ENVIRONMENT", "dev") == "dev":

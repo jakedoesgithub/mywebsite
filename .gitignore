@@ -72,3 +72,6 @@ docker-compose-prod.yml
 
 #.vscode
 .vscode/
+
+#backup folder - for reference to old files while I do the redesign
+/backup/
