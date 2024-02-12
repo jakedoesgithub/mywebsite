@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "home.apps.HomeConfig",
     "cookbook.apps.CookbookConfig",
+    "blog.apps.BlogConfig",
 ]
 
 MIDDLEWARE = [

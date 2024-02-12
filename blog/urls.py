@@ -5,17 +5,8 @@ app_name = "blog"
 
 # thsi is a stand in to prevent breaking in other parts of app until i get around to configuring this part
 urlpatterns = [
-    path("", views.RecipeListView.as_view(), name="home"),
-    path(
-        "author-detail/<slug:slug>/",
-        views.AuthorDetailView.as_view(),
-        name="author-detail",
-    ),
-    path(
-        "recipe-detail/<slug:slug>/",
-        views.RecipeDetailView.as_view(),
-        name="recipe-detail",
-    ),
-    path("author-list/", views.AuthorListView.as_view(), name="latest_post"),
-    path("about/", views.AboutCookbookView.as_view(), name="archive"),
+    path("", views.BlogHomeView.as_view(), name="home"),
+    path("latest/", views.LastestPostView.as_view(), name="latest-post"),
+    path("archive/", views.PostArchiveView.as_view(), name="archive"),
+    path("temp-post/", views.TempPostView.as_view(), name="temp-post"),
 ]

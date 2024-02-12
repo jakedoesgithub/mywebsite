@@ -19,8 +19,8 @@ class Tag(models.Model):
     slug = AutoSlugField(populate_from=["name"], editable=False, unique=True)
 
     class Meta:
-        verbose_name = _("Tag")
-        verbose_name_plural = _("Tags")
+        verbose_name = "Tag"
+        verbose_name_plural = "Tags"
 
     def __str__(self):
         """Unicode representation of Tag."""
@@ -49,8 +49,8 @@ class Post(models.Model):
     class Meta:
         """Meta definition for Post."""
 
-        verbose_name = _("Post")
-        verbose_name_plural = _("Posts")
+        verbose_name = "Post"
+        verbose_name_plural = "Posts"
 
     def __str__(self):
         """Unicode representation of Post."""

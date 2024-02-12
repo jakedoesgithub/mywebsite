@@ -1,8 +1,19 @@
-{% extends 'blog/blog-base.html' %}
+{% extends 'home/base.html' %}
 {% load static %}
 
+{% block title %}
+    The Best VSCode Extensions for Python Developers in 2024
+{% endblock title %}
+
+{% block head %}
+    <meta name="description"
+          content="Blog post 'The Best VSCode Extensions for Python Developers in 2024' by Jake Ardoin">
+    <meta name="keywords"
+          content="python, vscode, extensions, jake, ardoin, developer">
+{% endblock head %}
+
 {% block body %}
-    <h1>The Best, Most Useful VSCode Extensions for Python Developers</h1>
+    <h1>The Best VSCode Extensions for Python Developers in 2024</h1>
 
     <p>
         Anyone who uses VSCode is likely aware of the value of extensions. For those using VSCode to write Python code, they are pretty much essential for even basic functionality. I've been using VSCode for about 5+ years now, and these are the best extensions I've found for writing Python code in VSCode.
@@ -10,7 +21,7 @@
 
     <h2>Python and Pylance + Jupyter</h2>
 
-    <img src="{% static 'blog/images/python-plance.png %}"
+    <img src="{% static 'blog/images/temp-post/python-plance.png' %}"
          class=""
          width="815"
          height="150"
@@ -22,7 +33,7 @@
 
     <h2>Python Environment Manager</h2>
 
-    <img src=" {% static 'blog/images/python-package-manager.png' %}"
+    <img src=" {% static 'blog/images/temp-post/python-package-manager.png' %}"
          width="250"
          height="419"
          alt="">
@@ -33,7 +44,7 @@
 
     <h2>Python Test Explorer</h2>
 
-    <img src="{% static 'blog/images/python-test-explorer.png %}"
+    <img src="{% static 'blog/images/temp-post/python-test-explorer.png' %}"
          width="1200"
          height="525"
          alt="">
@@ -52,7 +63,7 @@
 
     <h2>Python Indent</h2>
 
-    <img src="{% static 'blog/images/python-indent.png' %}"
+    <img src="{% static 'blog/images/temp-post/python-indent.png' %}"
          class=""
          width="700"
          height="419"
@@ -64,7 +75,7 @@
 
     <h2>autoDocString</h2>
 
-    <img src="{% static 'blog/images/autodocstring.png %}"
+    <img src="{% static 'blog/images/temp-post/autodocstring.png' %}"
          class=""
          width="700"
          height="604"
@@ -96,7 +107,7 @@
         It's hard to illustrate what exactly Black Formatter and Flake 8 do with just a picture, so here's some cute cats instead.
     </p>
 
-    <img src="{% static 'blog/images/black-formatter-cats.png' %}"
+    <img src="{% static 'blog/images/temp-post/black-formatter-cats.png' %}"
          width="700"
          height="513"
          alt="An image of cats because I didn't have a good picture for black-formatter">
@@ -121,5 +132,4 @@
         <li>Check McCabe complexity</li>
         <li>Plugin support</li>
     </ol>
-
 {% endblock body %}

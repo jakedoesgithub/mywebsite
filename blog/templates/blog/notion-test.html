@@ -1,0 +1,368 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}
+    Notion Test
+{% endblock title %}
+
+{% block head %}
+    <meta name="description" content="stuuff">
+    <meta name="keywords" content="styuff">
+
+    <style>
+        img {
+            max-width: 100%;
+        }
+
+        @media only print {
+            img {
+                max-height: 100vh;
+                object-fit: contain;
+            }
+        }
+
+        .icon {
+            display: inline-block;
+            max-width: 1.2em;
+            max-height: 1.2em;
+            text-decoration: none;
+            vertical-align: text-bottom;
+            margin-right: 0.5em;
+        }
+
+        img.icon {
+            border-radius: 3px;
+        }
+
+
+
+
+        .page-cover-image {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            max-height: 30vh;
+        }
+		
+        .image {
+            border: none;
+            margin: 1.5em 0;
+            padding: 0;
+            border-radius: 0;
+            text-align: center;
+        }
+    </style>
+{% endblock head %}
+
+{% block body %}
+    <article id="f5adac1c-9f43-45ac-af7d-5645dd2ec3e1" class="page serif">
+
+        <header>
+
+            <img class="page-cover-image"
+                 src="{% static 'blog/images/notion-test/lindsay-moe-526857-unsplash.jpg' %}"
+                 style="object-position:center 50%" />
+
+            <div class="page-header-icon page-header-icon-with-cover">
+                <span class="icon">✏️</span>
+
+            </div>
+
+            <h1 class="page-title">Blog Post</h1>
+
+            <p class="page-description"></p>
+
+        </header>
+
+        <div class="page-body">
+
+            <div id="fb4a8ad0-d31f-47ff-9f23-a8ae1e62cf6f" class="column-list">
+
+                <div id="49b56953-68f7-4219-9649-eec482af6118"
+                     style="width:43.75%"
+                     class="column">
+
+                    <p id="150ad61c-642d-480a-b5d9-fd6338d9b269" class="block-color-gray">FEBRUARY 15, 2018</p>
+
+                </div>
+
+                <div id="4a4d87aa-40d6-4bc5-b297-1e256da2db7e"
+                     style="width:56.24999999999998%"
+                     class="column">
+
+                    <p id="c74edf8c-7eac-4f30-876e-51338bcd84ee" class="block-color-gray">
+                        <a href="https://blogs.getty.edu/iris/author/shwetasaraswat/">SHWETA SARASWAT</a>  AND <a href="https://blogs.getty.edu/iris/author/lhubber/">LAURA HUBBER</a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <p id="75060f35-1f00-4c58-bef7-56ef52a3bda6" class="block-color-gray">
+                A conversation with Ray Garcia,
+                Jonathan Gold, Evan Kleiman, Bricia Lopez, and Carlos Salgado about the evolving role of Mexican
+                cuisine
+                in LA as culture, art, and craft
+
+            </p>
+
+            <p id="28376d6b-f25e-49c3-af81-8b69de7b37db" class="block-color-gray">
+                Source: <a href="http://blogs.getty.edu/iris/5-food-icons-on-the-evolving-role-of-mexican-cuisine-in-la/">Food
+            Icons on the Evolving Role of Mexican Cuisine in LA</a>
+
+        </p>
+
+        <p id="d98575f2-1f5c-4c60-9c56-a0d1d79e6ccc" class="">
+            Together, critic Jonathan Gold, food scholar Evan
+            Kleiman, and chefs Ray Garcia, Bricia Lopez, and Carlos Salgado have spent more than a lifetime
+            preparing, eating, and writing about Latin American cuisine. Before their recent <a href="http://www.getty.edu/visit/cal/events/ev_2035.html">panel discussion</a> at the Getty,
+            offered
+            in conjunction with Pacific Standard Time, they sat down with us to reflect on the role of Mexican
+            cuisine in the life of Los Angeles and how we might expand our taste buds to go deeper.
+
+        </p>
+
+        <div id="bc576b93-94c6-46de-beec-2939e03888e7" class="column-list">
+
+            <div id="76217b38-68e8-44aa-b095-586d390ffca7"
+                 style="width:50%"
+                 class="column">
+
+                <p id="aff3d3df-f4b6-4673-9fbe-15342584ba35" class="">
+                    <strong>SS: As a chef (or critic), do you
+                    consider yourself an artist?</strong>
+
+                </p>
+
+                <p id="b6206ae1-22b6-4439-bb01-26c279c63d06" class="">
+                    <strong>EK:</strong> Art to me often has
+                    an
+                    intellectual component. I think of food preparation as a craft–I don’t think of it as art.
+
+                </p>
+
+                <p id="e7f3b0be-98d2-449e-adc5-319ae4190e2e" class="">
+                    <strong>RG:</strong> My personal approach
+                    to
+                    food is more of a craftsman. I like having my tools in hand, sort of creating and building,
+                    and
+                    my approach is much more trial and error. It’s part social scientist, and part repair person
+                    or
+                    builder. I put food out, and wait for the reaction, and see what we can push, what we can
+                    improve.
+
+                </p>
+
+            </div>
+
+            <div id="6c634794-892b-4e0f-bdf0-bc885b13c932"
+                 style="width:50%"
+                 class="column">
+
+                <figure id="20858009-cbbb-49b8-9aeb-15f67854ae82" class="image">
+                    <a href="Blog%20Post%20f5adac1c9f4345acaf7d5645dd2ec3e1/maarten-van-den-heuvel-400626-unsplash.jpg">
+
+                        <img style="width:4032px"
+                             src="{% static 'blog/images/notion-test/maarten-van-den-heuvel-400626-unsplash.jpg' %}" />
+                    </a>
+
+                </figure>
+
+                <p id="4497de7b-1a6e-4b3e-bca7-7b5c470360e1" class="block-color-gray">
+                    In the Getty Center
+                    auditorium
+                    for the recent “There Will Be Food“ panel.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <p id="7fd039dd-8e8c-4235-8a1f-5edd08f33fb3" class="">
+            <strong>JG:</strong> I’m a writer. Some people can
+            call writers artists, some people cannot. In terms of food, there are people who approach cuisine
+            from
+            an art angle. Carlos Salgado is astonishing that way. His food is rooted in Mexican flavors, but
+            there’s
+            this level of abstraction in his food. Is it art as opposed to food? No, it’s food, but it’s being
+            approached in a different way.
+
+        </p>
+
+        <p id="697a9cec-a05d-43aa-af0c-71029e558442" class="">
+            <strong>CS:</strong> The highest point in my life
+            is
+            being with close family and friends, in the backyard over a fire, cooking over the course of many
+            hours,
+            sitting under the sky, and just filling this space with so much warmth. When I’m cooking there, I
+            feel
+            much more like an artist than when I worked in the highest-concept restaurants. They are like
+            museums of
+            food, accessible only with a certain level of literacy on the part of the diner, with a certain
+            level of
+            cultural experience and background.
+
+        </p>
+
+        <div id="0a8ae859-8c22-46c2-bd96-b5c3069cd606" class="column-list">
+
+            <div id="7f962cbf-f431-4833-a669-a945c2570d69"
+                 style="width:50%"
+                 class="column">
+
+                <figure id="79f03251-3494-47be-baf7-81ffccfc1810" class="image">
+                    <a href="Blog%20Post%20f5adac1c9f4345acaf7d5645dd2ec3e1/edgar-castrejon-459814-unsplash.jpg">
+
+                        <img style="width:3630px"
+                             src="{% static 'blog/images/notion-test/edgar-castrejon-459814-unsplash.jpg' %}" />
+                    </a>
+
+                </figure>
+
+                <p id="f5c10f92-7548-4e20-91b8-0a66e000f93f" class="block-color-gray">
+                    Tamale with pepitas at
+                    Taco
+                    María in Costa Mesa
+
+                </p>
+
+            </div>
+
+            <div id="c086c6e3-5fe1-4a38-96ba-d91175b7a728"
+                 style="width:50%"
+                 class="column">
+
+                <p id="267e6e33-b18a-47c7-98cd-70c8e1fda8ff" class="">
+                    <strong>SS: This panel represents
+                        Mexican American cuisine in LA. What other kinds of Latin American cuisine or particular
+                    dishes from other regions do you like?</strong>
+
+                </p>
+
+                <p id="22c095ed-6e1d-4711-bfb0-de1741b06d08" class="">
+                    <strong>JG:</strong> El Salvadoreño
+                    cooking.
+                    It’s very basic, but the ways they use corn and greens and cheese. The fermentations are
+                    lovely.
+
+                </p>
+
+                <p id="9a2c0618-a9ff-4aad-9dc6-632f5098b0fc" class="">
+                    <strong>EK:</strong> I love Guatemalan
+                    tamales, maybe more than Mexican tamales. The masa is often mixed with potato, so it’s much
+                    more
+                    tender. They’re wrapped in banana leaves, so there’s a different flavor. And the way they
+                    are
+                    filled is different; often there’s olives or raisins or prunes in them.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <p id="e11198b1-063f-4fbd-b1e2-8fcc39a158f0" class="">
+            <strong>BL:</strong> I love Peruvian food.
+            Everything
+            from the ceviche to rice and beans, all of the flavors. It has so much depth.
+
+        </p>
+
+        <p id="e9265011-82e9-49b5-a982-863ca79bb413" class="">
+            <strong>CS:</strong> Baja coastal cuisine. The
+            freshness of it–you eat seafood in the morning because it just came in. Very simply prepared, very
+            intense, briny ocean flavors: big clams, oysters, shrimp. Big, big flavors.
+
+        </p>
+
+        <div id="e4d8740c-39b2-467e-8b27-0c8eec89891b" class="column-list">
+
+            <div id="cb37345c-20f2-4446-84a6-7581e81c4b6a"
+                 style="width:50%"
+                 class="column">
+
+                <p id="d64d8dda-06ee-4967-bbb6-471271f8b135" class="">
+                    <strong>SS: If you could recommend one
+                        dish or
+                        element in Mexican-American cuisine that a total beginner must try, what would it
+                    be?</strong>
+
+                </p>
+
+                <p id="ba95d254-afa3-4eb3-b3c3-321cb2033d60" class="">
+                    <strong>EK:</strong> Tacos, because
+                    anything
+                    you eat with your hands is less intimidating than something that requires silverware. It
+                    takes
+                    you back to the permission of childhood, and that joy of just eating that is super direct.
+                    There
+                    is nothing in between you and the food.
+
+                </p>
+
+                <p id="701e4a62-c402-40ce-af90-67bbc80c694b" class="">
+                    <strong>BL:</strong> I think mole is a
+                    really
+                    good one. A lot of people think of it as a chocolate sauce, and yes, it has chocolate, but
+                    it
+                    also has like 18 other things. I always recommend three things: mole, the barbacoa, and the
+                    chiles rellenos at my restaurant, just because I think they are universally delicious.
+
+                </p>
+
+            </div>
+
+            <div id="35f51b16-2c54-413b-b234-cb33183df95b"
+                 style="width:50%"
+                 class="column">
+
+                <figure id="e0e49af6-6a35-4396-b574-47703ab49791" class="image">
+                    <a href="{% static 'blog/images/notion-test/christine-siracusa-363257-unsplash.jpg' %}">
+
+                        <img style="width:4153px"
+                             src="{% static 'blog/images/images/notion-test/christine-siracusa-363257-unsplash.jpg' %}" />
+                    </a>
+
+                </figure>
+
+                <p id="f0409c1c-aa36-45bf-b839-5281efaacc60" class="block-color-gray">
+                    Dishes at Broken Spanish,
+                    in
+                    Downtown LA.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <p id="b3068543-dde5-4773-ba8c-ca3391845885" class="">
+            <strong>CS:</strong> I would say try more and
+            different types of chilies, and the salsas that result from them. The range of flavors, and balance
+            of
+            flavors, is really exciting, and is my favorite part of Mexican food.
+
+        </p>
+
+        <p id="bb87a50e-2863-4c25-8f64-c761fb6c4819" class="">
+            <strong>RG:</strong> Put aside your thoughts and
+            limitations on what Mexican food can be, and how much it can cost. Especially in LA, there is almost
+            a
+            cult-like following for cheap Mexican food, for the greasy taco truck. There is something people
+            find
+            exciting about that, but I think it’s good to stop and wonder why your taco costs a dollar. There
+            must
+            be a lot behind it that allows you to eat a dollar taco. It probably doesn’t include a living wage,
+            a
+            safe work environment, or the best quality ingredients for you and your body. We could understand
+            where
+            our food is coming from and be a bit more conscious in our choices.
+
+        </p>
+
+    </div>
+</article>
+<span class="sans" style="font-size:14px;padding-top:2em"></span>
+{% endblock body %}

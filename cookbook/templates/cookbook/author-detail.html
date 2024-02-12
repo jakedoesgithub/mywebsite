@@ -1,11 +1,11 @@
-{% extends 'cookbook/cookbook-base.html' %}
+{% extends 'home/base.html' %}
 {% load static %}
-{% block meta %}
+{% block head %}
     <meta name="description"
           content="Recipes by {{ author.first_name }}, {{ author.last_name }}">
     <meta name="keywords"
           content="{{ author.first_name }}, {{ author.last_name }}, cajun, recipe, cookbook, Louisiana">
-{% endblock meta %}
+{% endblock head %}
 {% block title %}
     Author Details
 {% endblock title %}
