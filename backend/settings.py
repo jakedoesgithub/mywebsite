@@ -29,7 +29,7 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = env("DJANGO_DEBUG", default=False)
+DEBUG = env("DEBUG", default=False)
 
 ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS", default="*").split(",")
 
@@ -75,6 +75,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = "backend.wsgi.application"
 
@@ -123,19 +124,22 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+STATIC_ROOT = "static/"
+
 
 # ANCHOR Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# ANCHOR DEV settings
-DEBUG_TOOLBAR_PANELS = []
+# # ANCHOR DEV settings
 
-if env.str("ENVIRONMENT", "dev") == "dev":
+if env("DEBUG", default=False) == True:
     INSTALLED_APPS += ("debug_toolbar",)
 
-    DEBUG_TOOLBAR_PANELS += [
+    MIDDLEWARE += ("debug_toolbar.middleware.DebugToolbarMiddleware",)
+
+    DEBUG_TOOLBAR_PANELS = [
         "debug_toolbar.panels.versions.VersionsPanel",
         "debug_toolbar.panels.sql.SQLPanel",
         "debug_toolbar.panels.timer.TimerPanel",
@@ -147,4 +151,6 @@ if env.str("ENVIRONMENT", "dev") == "dev":
         "debug_toolbar.panels.logging.LoggingPanel",
     ]
 
-    MIDDLEWARE += ("debug_toolbar.middleware.DebugToolbarMiddleware",)
+INTERNAL_IPS = [
+    "127.0.0.1",
+]

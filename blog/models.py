@@ -40,9 +40,9 @@ class Post(models.Model):
     tags = models.ManyToManyField(
         Tag, related_name="posts", help_text="Tags for the blog post"
     )
-    body = models.TextField(help_text="Post body")
-    snippet = models.TextField(
-        help_text="Post snippet", default="No snippet for this post"
+    content = models.TextField(help_text="Post content")
+    description = models.TextField(
+        help_text="Post description", default="No description for this post"
     )
     slug = AutoSlugField(populate_from=["title"], editable=False, unique=True)
 
@@ -51,6 +51,7 @@ class Post(models.Model):
 
         verbose_name = "Post"
         verbose_name_plural = "Posts"
+        ordering = ["-date_posted"]
 
     def __str__(self):
         """Unicode representation of Post."""

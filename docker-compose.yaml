@@ -10,24 +10,15 @@ services:
       - POSTGRES_HOST_AUTH_METHOD=trust
       - POSTGRES_DB=${POSTGRES_DB}
 
-  web:
-    build: .
-    command: python manage.py runserver
-    volumes:
-      - .:/code/app
-    ports:
-      - "8000:8000"
-    depends_on:
-      - postgres
-
-    # web:
+  # web:
   #   build: .
-  #   command: python manage.py runserver 0.0.0.0:8000
+  #   command: python manage.py runserver
   #   volumes:
   #     - .:/code/app
   #   ports:
   #     - "8000:8000"
   #   depends_on:
   #     - postgres
+
 volumes:
   postgres_data:

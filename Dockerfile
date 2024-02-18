@@ -17,5 +17,6 @@ RUN apt-get update
 WORKDIR /code/app
 COPY . /code/app
 
-EXPOSE 8000
+EXPOSE 8000 
+EXPOSE 5432
 #test
