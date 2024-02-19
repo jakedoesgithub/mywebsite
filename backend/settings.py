@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import socket
 import environ
 import dj_database_url
 
@@ -33,6 +34,11 @@ DEBUG = env("DEBUG", default=False)
 
 ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS", default="*").split(",")
 
+SESSION_COOKIE_SECURE = env("SESSION_COOKIE_SECURE", default=True)
+
+CSRF_COOKIE_SECURE = env("CSRF_COOKIE_SECURE", default=True)
+
+SECURE_SSL_REDIRECT = env("SECURE_SSL_REDIRECT", default=True)
 
 # ANCHOR Apps
 
@@ -43,6 +49,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_extensions",
     "home.apps.HomeConfig",
     "cookbook.apps.CookbookConfig",
     "blog.apps.BlogConfig",
@@ -134,7 +141,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # # ANCHOR DEV settings
 
-if env("DEBUG", default=False) == True:
+if DEBUG:
     INSTALLED_APPS += ("debug_toolbar",)
 
     MIDDLEWARE += ("debug_toolbar.middleware.DebugToolbarMiddleware",)
@@ -154,3 +161,7 @@ if env("DEBUG", default=False) == True:
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+import socket
+
+hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+INTERNAL_IPS += [ip[:-1] + "1" for ip in ips]

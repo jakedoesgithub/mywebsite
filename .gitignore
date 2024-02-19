@@ -68,7 +68,7 @@ dev.env
 
 
 #production files
-docker-compose-prod.yml
+docker-compose-prod.yaml
 
 #.vscode
 .vscode/
